@@ -27,11 +27,7 @@ export default function TextForm(props) {
     }
 
     const handleCopy = ()=>{
-        //console.log(text);
-        let textdata = document.getElementById('myBox');
-        textdata.select();
-        navigator.clipboard.writeText(textdata.value);
-        document.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(text);
         props.showAlert('Text is copied','success');
 
     }
